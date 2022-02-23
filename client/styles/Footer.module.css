@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: fit-content;
+    padding: 20px;
+    background-color: var(--secondary-color);
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    color: var(--primary-color);
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
