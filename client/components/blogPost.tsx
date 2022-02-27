@@ -15,7 +15,7 @@ const blogPost: NextPage<SingleBlogPostProps> = ({ post }) => {
             attributes: { url },
         },
     } = postImage;
-    const sliceContent = (str: string, length: number = 130) => {
+    const sliceContent = (str: string, length: number = 200) => {
         const sliced = str.slice(0, length);
         const lastSpace = sliced.lastIndexOf(' ');
         return sliced.slice(0, lastSpace).replaceAll(/[^a-zA-Z0-9,.!@ \s\r\n]/g, '') + '...';
@@ -43,7 +43,7 @@ const blogPost: NextPage<SingleBlogPostProps> = ({ post }) => {
                     <h2>{title}</h2>
                 </Link>
 
-                <h5>{sliceContent(content)}</h5>
+                <p>{sliceContent(content)}</p>
                 <Link href={'/blog/' + encodeURIComponent(slug)}>
                     <button className={moreBtn}>Read more</button>
                 </Link>

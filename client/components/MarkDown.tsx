@@ -1,9 +1,11 @@
+/* eslint-disable react/no-children-prop */
 import React, { FunctionComponent, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/default-highlight';
 import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import emoji from 'emoji-dictionary';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import rehypeRaw from 'rehype-raw';
 interface Props {
     content: string;
 }
@@ -20,6 +22,7 @@ const MarkDown: FunctionComponent<Props> = ({ content }) => {
             `}
             </style>
             <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
                 children={emojiSupport(content)}
                 className="markdown"
                 components={{

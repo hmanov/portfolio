@@ -15,7 +15,8 @@
     font-size: 12px;
     background-color: var(--secondary-color);
     width: fit-content;
-    border: 1px solid white;
+    border: 1px solid;
+    border-color: var(--primary-color);
 }
 .imgContainer {
     width: 50%;
@@ -30,6 +31,7 @@
 }
 .contentContainer h2 {
     color: var(--primary-color);
+    font-size: 2.5rem;
 }
 .contentContainer > button {
     margin-top: auto;
@@ -38,11 +40,11 @@
     width: 100%;
     height: fit-content;
 
-    border-radius: 5px;
     display: flex;
     gap: 20px;
     padding: 20px 0 40px 0;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid;
+    border-bottom-color: var(--primary-color);
     max-height: 400px;
     height: 100%;
 }
@@ -66,15 +68,25 @@
     cursor: pointer;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    border: 1px solid white;
-    cursor: pointer;
-}
 
+    border: 1px solid;
+    border-color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.moreBtn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
 @media screen and (max-width: 800px) {
     .container {
         flex-direction: column;
         max-height: fit-content;
         gap: 0;
+    }
+    .contentContainer h2 {
+        font-size: 1.5rem;
     }
     .contentContainer,
     .imgContainer {

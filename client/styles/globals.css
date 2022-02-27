@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 html,
 body {
     padding: 0;
@@ -41,4 +42,8 @@ a {
     width: 100% !important;
     position: relative !important;
     height: unset !important;
+}
+p {
+    font-weight: 400;
+    line-height: 1.7;
 }

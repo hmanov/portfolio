@@ -7,6 +7,9 @@ const { nav, navUl, navItem, active } = styles;
 const Nav = () => {
     const router = useRouter();
     const isActive = (link: string) => {
+        if (router.pathname.includes(link) && link !== '/') {
+            return active;
+        }
         return router.pathname === link ? active : '';
     };
     return (
@@ -26,13 +29,7 @@ const Nav = () => {
                         </a>
                     </Link>
                 </li>
-                <li className={navItem}>
-                    <Link href={'/tips'}>
-                        <a className={isActive('/tips')}>
-                            HotTips(<small>Js</small>)
-                        </a>
-                    </Link>
-                </li>
+
                 <li className={navItem}>
                     <Link href={'/about'}>
                         <a className={isActive('/about')}>

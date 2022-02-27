@@ -1,11 +1,10 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+
 import { GetServerSideProps } from 'next';
 import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
-import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/default-highlight';
-import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import MarkDown from '../components/MarkDown';
+import styles from '../styles/About.module.css';
+const { container } = styles;
 interface AboutData {
     data: {
         data: {
@@ -22,29 +21,8 @@ const about: NextPage<AboutData> = ({
 }) => {
     const { content } = attributes;
     return (
-        <div>
-            {/* <ReactMarkdown
-                children={content}
-                components={{
-                    code({ node, inline, className, children, ...props }) {
-                        const match = /language-(\w+)/.exec(className || '');
-                        return !inline && match ? (
-                            <SyntaxHighlighter
-                                children={String(children).replace(/\n$/, '')}
-                                style={nightOwl}
-                                language={match[1]}
-                                PreTag="div"
-                                {...props}
-                            />
-                        ) : (
-                            <code className={className} {...props}>
-                                {children}
-                            </code>
-                        );
-                    },
-                }}
-            /> */}
-            ,
+        <div className={container}>
+            <MarkDown content={content} />
         </div>
     );
 };

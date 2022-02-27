@@ -14,9 +14,8 @@
     gap: 30px;
 }
 .navItem {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--primary-color);
-    font-size: 18px;
 }
 .active {
     /* text-decoration: underline; */
@@ -30,7 +29,7 @@
 }
 @media only screen and (max-width: 600px) {
     .navItem {
-        width: fit-content;
+        width: 100%;
     }
     /* .navItem > a {
         display: inline-block;
