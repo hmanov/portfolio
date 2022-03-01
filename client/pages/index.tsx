@@ -34,8 +34,8 @@ const Home: NextPage = () => {
                     </p>
 
                     <p>
-                        Problem solver, organized person, interested in both hardware and software trends. Fan of Power
-                        lifting, volleyball and recently hiking. Love reading books! Thanks to my wife, we have two
+                        Problem solver, organized person, interested in both hardware and software trends. Fan of
+                        Powerlifting, volleyball and recently hiking. Love reading books! Thanks to my wife, we have two
                         beautiful daughters.
                     </p>
                     <p>

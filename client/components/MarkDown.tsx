@@ -18,6 +18,7 @@ const MarkDown: FunctionComponent<Props> = ({ content }) => {
            .markdown {
             position: relative;
             max-widht: 100%;
+            
            }
             `}
             </style>
@@ -53,7 +54,15 @@ const MarkDown: FunctionComponent<Props> = ({ content }) => {
                                 </CopyToClipboard>
                                 <SyntaxHighlighter
                                     children={String(children).replace(/\n$/, '')}
-                                    style={nightOwl}
+                                    style={{
+                                        ...nightOwl,
+                                        ...{
+                                            'hljs-comment': {
+                                                color: '#3aa83a',
+                                                fontStyle: 'italic',
+                                            },
+                                        },
+                                    }}
                                     language={match[1]}
                                     PreTag="div"
                                     showLineNumbers={true}
