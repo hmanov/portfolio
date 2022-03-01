@@ -18,14 +18,14 @@ const Nav = () => {
                 <li className={navItem}>
                     <Link href={'/'}>
                         <a className={isActive('/')}>
-                            Home(<small>this</small>)
+                            <small>this</small>.Home()
                         </a>
                     </Link>
                 </li>
                 <li className={navItem}>
                     <Link href={'/blog'}>
                         <a className={isActive('/blog')}>
-                            Blog(<small>[Js, React, stuff]</small>)
+                            <small>[js, react, stuff]</small>.Blog()
                         </a>
                     </Link>
                 </li>
@@ -33,7 +33,7 @@ const Nav = () => {
                 <li className={navItem}>
                     <Link href={'/about'}>
                         <a className={isActive('/about')}>
-                            About(<small>Me</small>)
+                            <small>me</small>.About()
                         </a>
                     </Link>
                 </li>

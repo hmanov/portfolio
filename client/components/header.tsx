@@ -6,7 +6,12 @@ const Header = () => {
     return (
         <header className={header}>
             <div>
-                <div className={logoContainer}> {'manov.dev'} </div>
+                <Link href="/">
+                    <div className={logoContainer}>
+                        {' '}
+                        <a href="">M.dev()</a>{' '}
+                    </div>
+                </Link>
                 <Nav />
             </div>
         </header>

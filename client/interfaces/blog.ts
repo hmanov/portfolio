@@ -21,6 +21,13 @@ export interface SingleBlogPostData {
         slug: string;
         publishedAt: Date;
         category: string;
+        Seo: [
+            {
+                metaDescription: string;
+                metaTitle: string;
+                metaKeywords: string;
+            }
+        ];
         postImage: {
             data: {
                 attributes: {

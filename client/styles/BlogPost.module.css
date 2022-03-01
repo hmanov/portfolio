@@ -1,97 +1,54 @@
+.container h1 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    padding-bottom: 30px;
+}
+.container h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    padding: 15px 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 50px;
+}
+.imgContainer {
+    max-width: 1200px;
+    width: 100%;
+    height: fit-content;
+    max-height: 600px;
+}
+.imgContainer img {
+    max-width: 1200px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.header {
+    font-size: 1.7rem;
+}
 .dateContainer {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 .cat {
     height: fit-content;
     color: var(--primary-color);
     padding: 7px;
     transform: rotate(20deg);
-    border-radius: 5px;
-    /* border: 1px solid var(--primary-color); */
     margin-top: -20px;
     margin-right: 10px;
-    font-weight: bold;
-    font-size: 12px;
-    background-color: var(--secondary-color);
+
+    font-size: 24px;
+    /* background-color: var(--secondary-color); */
     width: fit-content;
-    border: 1px solid;
-    border-color: var(--primary-color);
-}
-.imgContainer {
-    width: 50%;
-}
-.contentContainer {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 15px;
-    flex-grow: 2;
-}
-.contentContainer h2 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-}
-.contentContainer > button {
-    margin-top: auto;
-}
-.container {
-    width: 100%;
-    height: fit-content;
-
-    display: flex;
-    gap: 20px;
-    padding: 20px 0 40px 0;
-    border-bottom: 1px solid;
-    border-bottom-color: var(--primary-color);
-    max-height: 400px;
-    height: 100%;
-}
-.container img,
-.container h2 {
-    cursor: pointer;
-}
-.moreBtn {
-    display: inline-block;
-    padding: 7px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: 20px;
-
-    border: none;
-
-    font-weight: bold;
-
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-
-    border: 1px solid;
-    border-color: var(--primary-color);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-.moreBtn:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border-color: var(--primary-color);
-}
-@media screen and (max-width: 800px) {
-    .container {
-        flex-direction: column;
-        max-height: fit-content;
-        gap: 0;
-    }
-    .contentContainer h2 {
-        font-size: 1.5rem;
-    }
-    .contentContainer,
-    .imgContainer {
-        width: 100%;
-        padding: 5px;
-        height: fit-content;
-    }
+    /* border: 1px solid;
+    border-color: var(--primary-color); */
+    font-family: 'Cascadia Code', sans-serif;
 }

@@ -1,13 +1,12 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { SingleBlogPostProps } from '../interfaces/blog';
-import styles from '../styles/BlogPost.module.css';
+import styles from '../styles/BlogCard.module.css';
 import Date from './Date';
 const { dateContainer, cat, container, moreBtn, imgContainer, contentContainer } = styles;
 const blogPost: NextPage<SingleBlogPostProps> = ({ post }) => {
     const {
-        id,
-        attributes: { date, content, createdAt, updatedAt, title, slug, publishedAt, postImage, category },
+        attributes: { date, content, title, slug, postImage, category },
     } = post;
 
     const {

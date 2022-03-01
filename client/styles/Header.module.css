@@ -2,7 +2,8 @@
     min-height: 100px;
     width: 100%;
     background-color: var(--secondary-color);
-    border-bottom: 1px solid var(--primary-color);
+    /* border-bottom: 1px solid var(--primary-color); */
+    font-family: 'Cascadia Code', sans-serif;
 }
 .header > div {
     height: fit-content;
@@ -23,20 +24,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5em;
-    font-weight: bold;
-    font-style: italic;
-    color: var(--spec);
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+
+    color: var(--primary-color);
 }
 @media only screen and (max-width: 600px) {
     .header > div {
         flex-direction: column;
-        gap: 0;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .header > div {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
     }
     .logoContainer {
         max-width: 100%;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         margin-right: auto;
-        padding: 0 10px;
+        margin-left: auto;
+
+        padding: 10px;
     }
 }
